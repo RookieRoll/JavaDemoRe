@@ -4,6 +4,8 @@ import demo1.entity.ExpRequest;
 import demo1.entity.ExpResponse;
 import demo1.entity.RPCClient;
 
+import java.util.HashMap;
+
 public class DemoClient {
     private RPCClient client;
     public DemoClient(RPCClient  client){
