@@ -1,10 +1,13 @@
 import entity.ListNode;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
-        String[] ops=new String[]{"5","-2","4","C","D","9","+","+"};
-        BaseballGame baseballGame=new BaseballGame();
-        System.out.println(baseballGame.calPoints(ops));
+        String A = "this apple is sweet", B = "this apple is sour";
+        UncommonWordsfromTwoSentences uncommonWordsfromTwoSentences=new UncommonWordsfromTwoSentences();
+        var arr=uncommonWordsfromTwoSentences.uncommonFromSentences(A,B);
+        Arrays.stream(arr).forEach(System.out::println);
     }
 }
