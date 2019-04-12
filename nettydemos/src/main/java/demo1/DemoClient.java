@@ -26,6 +26,7 @@ public class DemoClient {
         DemoClient demo=new DemoClient(client);
         for (int i = 0; i < 20; i++) {
             System.out.printf("fib(%d) = %d\n", i, demo.fib(i));
+            System.out.printf("测试")
         }
         for (int i = 0; i < 20; i++) {
             ExpResponse res = demo.exp(2, i);
