@@ -4,12 +4,12 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Configuration {
-    private String driver;
-    private String url;
-    private String user;
-    private String pwd;
+	private String driver;
+	private String url;
+	private String user;
+	private String pwd;
 
-    	public Configuration() {
+	public Configuration() {
 		this("db.properties");
 	}
 
@@ -21,49 +21,49 @@ public class Configuration {
 			e.printStackTrace();
 		}
 		this.setDriver(properties.getProperty("driver"));
-        this.setPwd(properties.getProperty("Pwd"));
-        this.setUrl(properties.getProperty("url"));
-        this.setUser(properties.getProperty("user"));
+		this.setPwd(properties.getProperty("Pwd"));
+		this.setUrl(properties.getProperty("url"));
+		this.setUser(properties.getProperty("user"));
 	}
 
 	public Configuration(String driver, String url, String user, String pwd) {
-        this.setDriver(driver);
-        this.setPwd(pwd);
-        this.setUrl(url);
-        this.setUser(user);
+		this.setDriver(driver);
+		this.setPwd(pwd);
+		this.setUrl(url);
+		this.setUser(user);
 	}
 
-    public String getDriver() {
-        return driver;
-    }
+	public String getDriver() {
+		return driver;
+	}
 
-    public void setDriver(String driver) {
-        this.driver = driver;
-    }
+	public void setDriver(String driver) {
+		this.driver = driver;
+	}
 
-    public String getUrl() {
-        return url;
-    }
+	public String getUrl() {
+		return url;
+	}
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+	public void setUrl(String url) {
+		this.url = url;
+	}
 
-    public String getUser() {
-        return user;
-    }
+	public String getUser() {
+		return user;
+	}
 
-    public void setUser(String user) {
-        this.user = user;
-    }
+	public void setUser(String user) {
+		this.user = user;
+	}
 
-    public String getPwd() {
-        return pwd;
-    }
+	public String getPwd() {
+		return pwd;
+	}
 
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
-    }
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
 
 
 }

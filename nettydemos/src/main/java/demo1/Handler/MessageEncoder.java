@@ -12,17 +12,17 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 public class MessageEncoder extends MessageToMessageEncoder<MessageOutput> {
-    @Override
-    protected void encode(ChannelHandlerContext channelHandlerContext, MessageOutput messageOutput, List<Object> list) throws Exception {
-        ByteBuf buf = PooledByteBufAllocator.DEFAULT.directBuffer();
-        writeStr(buf, messageOutput.getRequestId());
-        writeStr(buf, messageOutput.getType());
-        writeStr(buf, JSON.toJSONString(messageOutput.getPlayLoad()));
-        list.add(buf);
-    }
+	@Override
+	protected void encode(ChannelHandlerContext channelHandlerContext, MessageOutput messageOutput, List<Object> list) throws Exception {
+		ByteBuf buf = PooledByteBufAllocator.DEFAULT.directBuffer();
+		writeStr(buf, messageOutput.getRequestId());
+		writeStr(buf, messageOutput.getType());
+		writeStr(buf, JSON.toJSONString(messageOutput.getPlayLoad()));
+		list.add(buf);
+	}
 
-    private void writeStr(ByteBuf buf, String s) {
-        buf.writeInt(s.length());
-        buf.writeBytes(s.getBytes(StandardCharsets.UTF_8));
-    }
+	private void writeStr(ByteBuf buf, String s) {
+		buf.writeInt(s.length());
+		buf.writeBytes(s.getBytes(StandardCharsets.UTF_8));
+	}
 }

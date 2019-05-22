@@ -17,6 +17,7 @@ package com.kobold.Connection;
  connPool.refreshConnections();
  connPool.closeConnectionPool();
  */
+
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.Driver;
@@ -42,15 +43,10 @@ public class ConnectionPool {
 	/**
 	 * 构造函数
 	 *
-	 * @param jdbcDriver
-	 *            String JDBC 驱动类串
-	 * @param dbUrl
-	 *            String 数据库 URL
-	 * @param dbUsername
-	 *            String 连接数据库用户名
-	 * @param dbPassword
-	 *            String 连接数据库用户的密码
-	 *
+	 * @param jdbcDriver String JDBC 驱动类串
+	 * @param dbUrl      String 数据库 URL
+	 * @param dbUsername String 连接数据库用户名
+	 * @param dbPassword String 连接数据库用户的密码
 	 */
 	public ConnectionPool(String jdbcDriver, String dbUrl, String dbUsername,
 	                      String dbPassword) {
@@ -68,6 +64,7 @@ public class ConnectionPool {
 	public int getInitialConnections() {
 		return this.initialConnections;
 	}
+
 	/**
 	 * 设置连接池的初始大小
 	 *
@@ -76,6 +73,7 @@ public class ConnectionPool {
 	public void setInitialConnections(int initialConnections) {
 		this.initialConnections = initialConnections;
 	}
+
 	/**
 	 * 返回连接池自动增加的大小 、
 	 *
@@ -84,6 +82,7 @@ public class ConnectionPool {
 	public int getIncrementalConnections() {
 		return this.incrementalConnections;
 	}
+
 	/**
 	 * 设置连接池自动增加的大小
 	 *
@@ -93,6 +92,7 @@ public class ConnectionPool {
 	public void setIncrementalConnections(int incrementalConnections) {
 		this.incrementalConnections = incrementalConnections;
 	}
+
 	/**
 	 * 返回连接池中最大的可用连接数量
 	 *
@@ -101,6 +101,7 @@ public class ConnectionPool {
 	public int getMaxConnections() {
 		return this.maxConnections;
 	}
+
 	/**
 	 * 设置连接池中最大可用的连接数量
 	 *
@@ -123,8 +124,7 @@ public class ConnectionPool {
 	/**
 	 * 设置测试表的名字
 	 *
-	 * @param testTable
-	 *            String 测试表的名字
+	 * @param testTable String 测试表的名字
 	 */
 
 	public void setTestTable(String testTable) {
@@ -132,7 +132,6 @@ public class ConnectionPool {
 	}
 
 	/**
-	 *
 	 * 创建一个数据库连接池，连接池中的可用连接的数量采用类成员 initialConnections 中设置的值
 	 */
 
@@ -155,8 +154,7 @@ public class ConnectionPool {
 	/**
 	 * 创建由 numConnections 指定数目的数据库连接 , 并把这些连接 放入 connections 向量中
 	 *
-	 * @param numConnections
-	 *            要创建的数据库连接的数目
+	 * @param numConnections 要创建的数据库连接的数目
 	 */
 
 	private void createConnections(int numConnections) throws SQLException {
@@ -180,6 +178,7 @@ public class ConnectionPool {
 			// System.out.println(" 数据库连接己创建 ......");
 		}
 	}
+
 	/**
 	 * 创建一个新的数据库连接并返回它
 	 *
@@ -295,8 +294,7 @@ public class ConnectionPool {
 	/**
 	 * 测试一个连接是否可用，如果不可用，关掉它并返回 false 否则可用返回 true
 	 *
-	 * @param conn
-	 *            需要测试的数据库连接
+	 * @param conn 需要测试的数据库连接
 	 * @return 返回 true 表示此连接可用， false 表示不可用
 	 */
 
@@ -350,7 +348,6 @@ public class ConnectionPool {
 
 	/**
 	 * 刷新连接池中所有的连接对象
-	 *
 	 */
 
 	public synchronized void refreshConnections() throws SQLException {
@@ -415,6 +412,7 @@ public class ConnectionPool {
 			System.out.println(" 关闭数据库连接出错： " + e.getMessage());
 		}
 	}
+
 	/**
 	 * 使程序等待给定的毫秒数
 	 *
@@ -427,8 +425,8 @@ public class ConnectionPool {
 		} catch (InterruptedException e) {
 		}
 	}
+
 	/**
-	 *
 	 * 内部使用的用于保存连接池中连接对象的类 此类中有两个成员，一个是数据库的连接，另一个是指示此连接是否 正在使用的标志。
 	 */
 

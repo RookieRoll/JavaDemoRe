@@ -65,23 +65,24 @@ public class AbstractBeanFactory implements BeanFactory {
 	 * 预处理bean的定义，将bean的名字提前存好，实现ioc容器中存储单例bean
 	 */
 	public void preInstantiateSingletons() throws Exception {
-		Iterator it =this.beanDefinitionNames.iterator();
-		while (it.hasNext()){
-			String name= (String) it.next();
+		Iterator it = this.beanDefinitionNames.iterator();
+		while (it.hasNext()) {
+			String name = (String) it.next();
 			getBean(name);
 		}
 	}
 
 	/**
 	 * 根据类型获取所有的bean实例
+	 *
 	 * @param type
 	 * @return
 	 * @throws Exception
 	 */
 	public List getBeansForType(Class type) throws Exception {
-		List beans=new ArrayList<Object>();
-		for(String beanDefinitionName:beanDefinitionNames){
-			if(type.isAssignableFrom(beanDefinitionMap.get(beanDefinitionName).getBeanClass()))
+		List beans = new ArrayList<Object>();
+		for (String beanDefinitionName : beanDefinitionNames) {
+			if (type.isAssignableFrom(beanDefinitionMap.get(beanDefinitionName).getBeanClass()))
 				beans.add(getBean(beanDefinitionName));
 		}
 		return beans;

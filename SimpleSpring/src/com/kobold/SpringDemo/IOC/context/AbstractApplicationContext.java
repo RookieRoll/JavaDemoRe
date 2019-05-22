@@ -5,11 +5,11 @@ import com.kobold.SpringDemo.IOC.factory.AbstractBeanFactory;
 
 import java.util.List;
 
-public abstract class AbstractApplicationContext implements ApplicationContext{
+public abstract class AbstractApplicationContext implements ApplicationContext {
 	protected AbstractBeanFactory beanFactory;
 
-	public AbstractApplicationContext(AbstractBeanFactory beanFactory){
-		this.beanFactory=beanFactory;
+	public AbstractApplicationContext(AbstractBeanFactory beanFactory) {
+		this.beanFactory = beanFactory;
 	}
 
 	public void refresh() throws Exception {
@@ -26,8 +26,10 @@ public abstract class AbstractApplicationContext implements ApplicationContext{
 	}
 
 	protected abstract void loadBeanDefinitions(AbstractBeanFactory beanFactory) throws Exception;
+
 	/**
 	 * 可用于实例化AspectJAwareAdvisorAutoProxyCreator
+	 *
 	 * @param beanFactory
 	 * @throws Exception
 	 */
@@ -39,7 +41,7 @@ public abstract class AbstractApplicationContext implements ApplicationContext{
 	}
 
 	// 实现支持singleton(单例)类型的bean
-	protected void onRefresh() throws Exception{
+	protected void onRefresh() throws Exception {
 		beanFactory.preInstantiateSingletons();
 	}
 

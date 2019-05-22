@@ -6,10 +6,10 @@ import demo1.entity.ExpRequest;
 import demo1.entity.RPCServer;
 
 public class DemoServer {
-    public static  void main(String[] args){
-        RPCServer server =new RPCServer("localhost",8888,1,16);
-        server.service("fib",Integer.class,new FibRequestHandler())
-                .service("exp", ExpRequest.class,new ExpRequestHandler());
-        server.start();
-    }
+	public static void main(String[] args) {
+		RPCServer server = new RPCServer("localhost", 8888, 1, 16);
+		server.service("fib", Integer.class, new FibRequestHandler())
+				.service("exp", ExpRequest.class, new ExpRequestHandler());
+		server.start();
+	}
 }

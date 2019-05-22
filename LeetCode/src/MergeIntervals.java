@@ -20,7 +20,7 @@ public class MergeIntervals {
 				ans.add(item);
 				last = item;
 			} else {
-				last.setEnd( Math.max(last.getEnd(), item.getEnd()));  // Modify the element already in list
+				last.setEnd(Math.max(last.getEnd(), item.getEnd()));  // Modify the element already in list
 			}
 		}
 		return ans;

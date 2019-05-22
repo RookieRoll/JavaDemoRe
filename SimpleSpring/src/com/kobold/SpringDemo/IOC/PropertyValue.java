@@ -1,8 +1,8 @@
 package com.kobold.SpringDemo.IOC;
 
 public class PropertyValue {
-	private final  String name;
-	private final  Object value;
+	private final String name;
+	private final Object value;
 
 	public PropertyValue(String name, Object value) {
 		this.name = name;

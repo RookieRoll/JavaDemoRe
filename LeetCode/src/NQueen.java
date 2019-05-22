@@ -15,21 +15,21 @@ public class NQueen {
 
 	public void found(int col) {
 		for (int i = 0; i < N; i++) {
-			if (canPlace(i)){
-				if(col==N)
+			if (canPlace(i)) {
+				if (col == N)
 					print();
-				else{
-					array[col]=i;
-					found(col+1);
+				else {
+					array[col] = i;
+					found(col + 1);
 				}
 			}
 		}
 	}
 
-	private void print(){
-		for(int i=0;i<N;i++){
-			for(int j=0;j<N;j++){
-				if(array[i]==j)
+	private void print() {
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
+				if (array[i] == j)
 					System.out.print("Q");
 				else
 					System.out.print("*");
@@ -38,13 +38,14 @@ public class NQueen {
 		}
 		System.out.println();
 	}
+
 	/**
 	 * array 棋盘
 	 * k 当前列
 	 */
-	private boolean canPlace( int k) {
+	private boolean canPlace(int k) {
 		for (int i = 0; i < N; i++) {
-			if (Math.abs(array[i] - i) ==Math.abs(k-i))
+			if (Math.abs(array[i] - i) == Math.abs(k - i))
 				return false;
 			if (array[i] == k)
 				return false;

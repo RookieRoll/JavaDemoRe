@@ -14,15 +14,15 @@ public class Main {
 	public static void main(String[] args) {
 		// write your code here
 		//定义配置文件
-		while (true){
+		while (true) {
 			Configuration configuration = new Configuration("com.mysql.jdbc.Driver",
-					"jdbc:mysql://47.106.100.79:3306/EmsDb","root","qh18723361304");
+					"jdbc:mysql://47.106.100.79:3306/EmsDb", "root", "qh18723361304");
 			OrmService orm = new OrmServiceImpl(configuration);
 			String sql = "select * from `Area` where Id=:id";
 			Map<String, Object> value = new HashMap<>();
 			value.put("id", 7);
 			List<Area> demo0 = orm.findAll(sql, value, Area.class);
-			demo0.stream().forEach(m-> System.out.println(m.getName()));
+			demo0.stream().forEach(m -> System.out.println(m.getName()));
 		}
 
 

@@ -19,8 +19,8 @@ import java.io.InputStream;
 import java.util.Map;
 
 public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
-	public XmlBeanDefinitionReader( ResourceLoader resourceLoader) {
-		super( resourceLoader);
+	public XmlBeanDefinitionReader(ResourceLoader resourceLoader) {
+		super(resourceLoader);
 	}
 
 	@Override

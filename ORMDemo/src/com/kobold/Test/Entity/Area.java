@@ -1,58 +1,58 @@
 package com.kobold.Test.Entity;
 
 public class Area {
-    private int Id;
-    private String Name;
-    private String Code;
-    private int ParentId;
-    private String Path;
-    private String CodeId;
+	private int Id;
+	private String Name;
+	private String Code;
+	private int ParentId;
+	private String Path;
+	private String CodeId;
 
-    public int getId() {
-        return Id;
-    }
+	public int getId() {
+		return Id;
+	}
 
-    public void setId(int id) {
-        Id = id;
-    }
+	public void setId(int id) {
+		Id = id;
+	}
 
-    public String getName() {
-        return Name;
-    }
+	public String getName() {
+		return Name;
+	}
 
-    public void setName(String name) {
-        Name = name;
-    }
+	public void setName(String name) {
+		Name = name;
+	}
 
-    public String getCode() {
-        return Code;
-    }
+	public String getCode() {
+		return Code;
+	}
 
-    public void setCode(String code) {
-        Code = code;
-    }
+	public void setCode(String code) {
+		Code = code;
+	}
 
-    public int getParentId() {
-        return ParentId;
-    }
+	public int getParentId() {
+		return ParentId;
+	}
 
-    public void setParentId(int parentId) {
-        ParentId = parentId;
-    }
+	public void setParentId(int parentId) {
+		ParentId = parentId;
+	}
 
-    public String getPath() {
-        return Path;
-    }
+	public String getPath() {
+		return Path;
+	}
 
-    public void setPath(String path) {
-        Path = path;
-    }
+	public void setPath(String path) {
+		Path = path;
+	}
 
-    public String getCodeId() {
-        return CodeId;
-    }
+	public String getCodeId() {
+		return CodeId;
+	}
 
-    public void setCodeId(String codeId) {
-        CodeId = codeId;
-    }
+	public void setCodeId(String codeId) {
+		CodeId = codeId;
+	}
 }
