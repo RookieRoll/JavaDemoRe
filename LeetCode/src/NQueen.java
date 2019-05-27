@@ -16,9 +16,9 @@ public class NQueen {
 	public void found(int col) {
 		for (int i = 0; i < N; i++) {
 			if (canPlace(i)) {
-				if (col == N)
+				if (col == N) {
 					print();
-				else {
+				} else {
 					array[col] = i;
 					found(col + 1);
 				}
@@ -29,10 +29,11 @@ public class NQueen {
 	private void print() {
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
-				if (array[i] == j)
+				if (array[i] == j) {
 					System.out.print("Q");
-				else
+				} else {
 					System.out.print("*");
+				}
 			}
 			System.out.println();
 		}
@@ -45,10 +46,12 @@ public class NQueen {
 	 */
 	private boolean canPlace(int k) {
 		for (int i = 0; i < N; i++) {
-			if (Math.abs(array[i] - i) == Math.abs(k - i))
+			if (Math.abs(array[i] - i) == Math.abs(k - i)) {
 				return false;
-			if (array[i] == k)
+			}
+			if (array[i] == k) {
 				return false;
+			}
 		}
 		return true;
 	}
