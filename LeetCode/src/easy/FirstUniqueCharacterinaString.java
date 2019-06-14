@@ -1,3 +1,4 @@
+package easy;
 
 public class FirstUniqueCharacterinaString {
 	public int firstUniqChar(String s) {

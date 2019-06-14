@@ -1,3 +1,5 @@
+package easy;
+
 import entity.ListNode;
 
 public class RemoveNthNode {

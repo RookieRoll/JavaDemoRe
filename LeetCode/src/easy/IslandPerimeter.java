@@ -1,3 +1,5 @@
+package easy;
+
 public class IslandPerimeter {
 	public int islandPerimeter(int[][] grid) {
 		int repeat = 0;

@@ -1,15 +1,13 @@
-import entity.ListNode;
+import easy.FlippingAnImage;
+import easy.SortArrayByParity;
 
 import java.util.Arrays;
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 
 public class Main {
 
 	public static void main(String[] args) {
-		FirstUniqueCharacterinaString nqueen = new FirstUniqueCharacterinaString();
-	nqueen.firstUniqChar("leetcode");
+		SortArrayByParity flippingAnImage=new SortArrayByParity();
+		int a[]={3,1,2,4};
+		Arrays.stream(flippingAnImage.sortArrayByParity(a)).forEach(m-> System.out.print(m));
 	}
 }

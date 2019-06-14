@@ -1,3 +1,5 @@
+package easy;
+
 import entity.TreeNode;
 
 public class TrimaBinarySearchTree {

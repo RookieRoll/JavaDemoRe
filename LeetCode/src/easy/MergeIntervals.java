@@ -1,3 +1,5 @@
+package easy;
+
 import entity.Interval;
 
 import java.util.ArrayList;

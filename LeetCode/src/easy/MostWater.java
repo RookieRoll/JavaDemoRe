@@ -1,3 +1,5 @@
+package easy;
+
 public class MostWater {
 
 	public int MaxArea(int[] height) {

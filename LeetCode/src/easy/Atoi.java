@@ -1,3 +1,5 @@
+package easy;
+
 public class Atoi {
 	public int myAtoi(String str) {
 		String temp = str.trim();

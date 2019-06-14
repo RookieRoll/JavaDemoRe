@@ -1,3 +1,5 @@
+package easy;
+
 import javax.xml.stream.events.Characters;
 
 public class ToLowerCase {
