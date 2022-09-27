@@ -27,7 +27,6 @@ public class ReverseSubstringsBetweenEachPairofParentheses {
 	}
 
 	public String reverse(String s) {
-		StringBuilder stringBuilder = new StringBuilder();
 		int leftIndex = 0;
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i) == '(') {
