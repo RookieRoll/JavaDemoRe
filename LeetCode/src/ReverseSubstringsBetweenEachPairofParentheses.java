@@ -8,7 +8,7 @@
 public class ReverseSubstringsBetweenEachPairofParentheses {
 	public static void main(String[] args) {
 		ReverseSubstringsBetweenEachPairofParentheses parentheses = new ReverseSubstringsBetweenEachPairofParentheses();
-		System.out.println(parentheses.reverseParentheses("abcd"));
+		System.out.println(parentheses.reverseParentheses("abaeioucd"));
 	}
 
 	public String reverseParentheses(String s) {

@@ -1,12 +1,8 @@
-import easy.*;
-
-import java.util.Arrays;
+import java.security.NoSuchAlgorithmException;
 
 public class Main {
 
-	public static void main(String[] args) {
-		DeleteColumnstoMakeSorted  sorted=new DeleteColumnstoMakeSorted();
-		String[] str={"zyx","wvu","tsr"};
-		sorted.minDeletionSize(str);
+	public static void main(String[] args) throws NoSuchAlgorithmException {
+		System.out.println(("eced".compareTo("ed")));
 	}
 }
