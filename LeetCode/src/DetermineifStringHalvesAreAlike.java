@@ -31,5 +31,4 @@ public class DetermineifStringHalvesAreAlike {
 		return left == right;
 	}
 
-
 }
